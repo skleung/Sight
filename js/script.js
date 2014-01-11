@@ -17,7 +17,6 @@ $(document).ready(function(){
 		var form_string = $('.create-room').serialize(); // Collect data from form
 		var randomKey = getKey();
 		var data_string = form_string+"&roomkey="+randomKey;
-		alert("data_string = "+data_string);
 		$.ajax({
 			type: "POST",
 			url: $('#create-room').attr('action'),

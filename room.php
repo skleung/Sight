@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Signin to your site</title>
+    <title>Sign-in to your site</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -42,7 +42,7 @@
   <body>
     <div class="container-fluid">
       <form class="form-signin" role="form" action="poproom.php">
-        <h2 class="form-signin-heading">Sign in to your Site:</h2>
+        <h2 class="form-signin-heading">Sign in to your <strong>site</strong>:</h2>
         <input type="text" class="form-control" name = "name" placeholder="Name" required autofocus>
 <!--         <input type="text" class="form-control" placeholder="Password" required>
  -->    </br>
