@@ -34,7 +34,8 @@ $(document).ready(function(){
 				}
 			},
 			success: function() {
-				$('.link').html("http://sight.com?key="+randomKey);
+				var roomLink = "room.php?roomkey="+randomKey;
+				$('.link').html("<a href = '"+roomLink+"'>"+roomLink+"</a>");
 				$('.link-container').slideDown();
 				$('.success').fadeIn();
 				jQuery(".form-input").val("");
