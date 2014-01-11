@@ -2,16 +2,23 @@ $(document).ready(function(){
     $('#home').height($(window).height());
     $('#login').height($(window).height() - $(".footer").height());
 
-
+    function getKey(){
+	    var text = "";
+	    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	    for( var i=0; i < 12; i++ )
+	        text += possible.charAt(Math.floor(Math.random() * possible.length));
+	    return text;
+    }
     //create room submission
-    $('.create-room').click(function(){ // when the button is clicked the code executes
+    $('.create-room-btn').click(function(){ // when the button is clicked the code executes
 		$('.error').hide(); // reset the error messages (hides them)
 		var error = false; // we will set this true if the form isn't valid
-		var data_string = $('#create-room').serialize(); // Collect data from form
+		var data_string = $('.create-room').serialize(); // Collect data from form
+		var randomKey = getKey();
 		$.ajax({
 			type: "POST",
-			url: $('#contact-form').attr('action'),
-			data: data_string,
+			url: $('#create-room').attr('action'),
+			data: data_string+"&key="+randomKey,
 			timeout: 6000,
 			error: function(request,error) {
 				if (error == "timeout") {
