@@ -69,13 +69,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">SIGHT</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#login">Make a Room!</a></li>
+            <li><a href="#contact">About</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -92,17 +92,33 @@
     <div class = "container" id="fill">
       <div class = "login-wrapper">
         <h1> create a room</h1>
-        <form>
+        <form action = "buildRoom.php" id = "create-room">
           <div class="input-group input-group-lg">
   <!--           <span class="input-group-addon">Name: </span> -->
             <input type="text" class="form-control" placeholder="Enter your name">
-            <span class="input-group-btn">
+<!--             <span class="input-group-btn">
               <button class="btn btn-default" type="button">Go!</button>
-            </span>
+            </span> -->
           </div>
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="Room name">
+          </div>
+          <div class="input-append bootstrap-timepicker">
+            <input id="timepicker1" type="text" class="input-small">
+            <span class="add-on"><i class="icon-time"></i></span>
+          </div>
+          </br>
+          </br>
+          
+            <button class="create-room" type="button">Submit</button>
+          </span>
+          <span id="err"></span>
         </form>
       </div>
     </div>
+  </div>
+  <div class="footer">
+    created by <strong>David Eng</strong>, <strong>Sherman Leung</strong>, and <strong>Vineeth Gangaram</strong>
   </div>
 <!--     <div id="map-canvas"/> -->
 
