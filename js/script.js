@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $('#home').height($(window).height());
-    $('#login').height($(window).height() - $(".footer").height());
+    $('#login').height($(window).height());
+    $('#about').height($(window).height() - $(".footer").height());
 
     function getKey(){
 	    var text = "";
@@ -31,6 +32,8 @@ $(document).ready(function(){
 				}
 			},
 			success: function() {
+				$('.link').html("http://sight.com?key="+randomKey);
+				$('.link-container').slideDown();
 				$('.success').fadeIn();
 				jQuery(".form-input").val("");
 			}

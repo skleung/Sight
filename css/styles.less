@@ -21,12 +21,16 @@ body{
 	-moz-border-radius: 15px;
 	border-radius: 15px;
 	margin-left: -10%;
+	padding: 8%;
 	h1{
 		font-weight: bold;
 		color: #fff;
 		font-size: 50px;
 		text-shadow: 2px 2px #999;
 		text-transform: uppercase;
+		.thin{
+			font-weight: normal;
+		}
 	}
 	.subtitle{
 		font-weight: bold;
@@ -61,6 +65,13 @@ html { height: 100% }
 	strong{
 		color: @cobalt;
 	}
+	a{
+		text-decoration: none;
+		color: inherit;
+	}
+	a:hover{
+		color: lighten(@cobalt, 20%);
+	}
 }
 .create-room-btn{
 	margin: 10px;
@@ -87,4 +98,28 @@ form{
 }
 small{
 	color: #888;
+}
+.link-container{
+	display:none;
+	margin-top: 15%;
+}
+.link{
+	width: 40%;
+	height: auto;
+	font-size: 18px;
+	font-weight: bold;
+	color: @cobalt;
+}
+.about-wrapper{
+	margin-left: 25%;
+	width: 60%;
+	.right{
+		float: right;
+	}
+	strong{
+		color: @cobalt;
+	}
+	.center{
+		text-align: center;
+	}
 }
