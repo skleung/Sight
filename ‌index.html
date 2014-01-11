@@ -8,37 +8,18 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="ico/favicon.png">
     <script type="text/javascript"
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIsbeJfT3wf3EvaVbycKn98Gc-k5Kf-Rw&sensor=true">
-	</script>
+       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIsbeJfT3wf3EvaVbycKn98Gc-k5Kf-Rw&sensor=true">
+    </script>
     <script type="text/javascript">
-      // function initialize() {
-      //   var initPos = navigator.geolocation.getCurrentPosition(initMap);
-      //   function initMap(pos){
-      //     var mapOptions = {
-      //       center: new google.maps.LatLng(-7.7801502, 110.3846387),
-      //       // center: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
-      //       zoom: 8
-      //     };
-      //     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-      //   }
-      // }
       function initialize() {
-        var latLng = new google.maps.LatLng(-7.7801502, 110.3846387);
         var mapOptions = {
-          center: latLng,
+          center: new google.maps.LatLng(37.42, 122.16),
           zoom: 8
         };
-        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
       }
       google.maps.event.addDomListener(window, 'load', initialize);
-    //   function scrollMap(position) {
-    //     alert('hi');
-    //     var lat = position.coords.latitude;
-    //     var lng = position.coords.longitude;
-    //     map.setCenter(new google.maps.LatLng(lat, lng));// Scrolls the map so that it is centered at (position.coords.latitude, position.coords.longitude).
-    //   }
-    // // Request repeated updates.
-    //   var watchId = navigator.geolocation.watchPosition(scrollMap);
     </script>
     <title>Sight :: sites you can see</title>
 
@@ -60,7 +41,7 @@
   </head>
 
   <body>
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+   <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -75,7 +56,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#login" class = "scroll">Create a Room</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about" class = "scroll">About</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -138,7 +119,6 @@
   <div class="footer">
     created by <strong>David Eng</strong>, <strong><a href = "http://skleung.github.io">Sherman Leung</a></strong>, and <strong>Vineeth Gangaram</strong>
   </div>
-<!--     <div id="map-canvas"/> -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
