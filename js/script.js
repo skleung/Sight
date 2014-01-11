@@ -32,6 +32,10 @@ $(document).ready(function(){
 					$('#err').fadeIn();
 					$("#err").html('An error occurred: ' + error + '');
 				}
+				var roomLink = "room.php?roomkey="+randomKey;
+				$('.link').html("<a href = '"+roomLink+"'>"+roomLink+"</a>");
+				$('.link-container').slideDown();
+				jQuery(".form-input").val("");
 			},
 			success: function() {
 				var roomLink = "room.php?roomkey="+randomKey;
@@ -41,11 +45,6 @@ $(document).ready(function(){
 				jQuery(".form-input").val("");
 			}
 		});
-		var roomLink = "room.php?roomkey="+randomKey;
-		$('.link').html("<a href = '"+roomLink+"'>"+roomLink+"</a>");
-		$('.link-container').slideDown();
-		$('.success').fadeIn();
-		jQuery(".form-input").val("");
 		return false; // stops user browser being directed to the php file
 	});
 
