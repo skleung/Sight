@@ -17,8 +17,9 @@ $(document).ready(function(){
 		var form_string = $('.create-room').serialize(); // Collect data from form
 		var randomKey = getKey();
 		var data_string = form_string+"&roomkey="+randomKey;
+		alert("data = "+data_string);
 		$.ajax({
-			type: "POST",
+			type: "GET",
 			url: $('#create-room').attr('action'),
 			data: data_string,
 			timeout: 6000,
@@ -37,7 +38,7 @@ $(document).ready(function(){
 				jQuery(".form-input").val("");
 			},
 			success: function() {
-				var roomLink = "room.php?roomkey="+randomKey;
+				var roomLink = "php/room.php?roomkey="+randomKey;
 				$('.link').html("<a href = '"+roomLink+"'>"+roomLink+"</a>");
 				$('.link-container').slideDown();
 				$('.success').fadeIn();
